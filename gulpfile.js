@@ -8,15 +8,8 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
   scripts: ['assets/coffee/*.coffee'],
-    css: ['assets/scss/*.scss']
+    css: ['assets/less/*.less']
 };
-
-gulp.task('scss', function() {
-  return gulp.src(paths.css)
-    .pipe(sass({ style: 'expanded' }))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('stylesheets'))
-});
 
 gulp.task('less', function () {
   return gulp.src(paths.css)
@@ -34,7 +27,7 @@ gulp.task('scripts', function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
-  gulp.watch(paths.css, ['scss']);
+  gulp.watch(paths.css, ['less']);
 });
 
-gulp.task('default', ['scripts', 'scss', 'watch']);
+gulp.task('default', ['scripts', 'less', 'watch']);
