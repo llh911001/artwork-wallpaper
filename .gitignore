@@ -1,3 +1,4 @@
 node_modules/
 *.swp
 server/*.js
+npm-debug.log

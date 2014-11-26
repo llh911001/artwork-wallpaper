@@ -1,6 +1,10 @@
 {
   "name": "artwork-wallpaper",
   "version": "0.0.1",
+  "scripts": {
+    "start": "node --harmony app.js",
+    "test": "mocha --harmony"
+  },
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^2.0.0",
@@ -9,6 +13,7 @@
     "gulp-uglify": "^1.0.1"
   },
   "dependencies": {
-    "koa": "^0.13.0"
+    "koa": "^0.13.0",
+    "mocha": "^2.0.1"
   }
 }
