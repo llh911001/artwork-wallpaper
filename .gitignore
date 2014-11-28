@@ -1,4 +1,5 @@
 node_modules/
 *.swp
-server/*.js
+controllers/*.js
 npm-debug.log
+app.js
