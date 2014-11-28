@@ -25,14 +25,14 @@ gulp.task('client-coffee', function() {
 });
 
 gulp.task('server-coffee', function() {
-  return gulp.src(['**/*.coffee', '!assets/'])
+  return gulp.src(['**/*.coffee', '!assets/**'])
     .pipe(coffee({bare: true}))
     .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['client-coffee']);
-  gulp.watch(['**/*.coffee', '!assets/'], ['server-coffee']);
+  gulp.watch(['**/*.coffee', '!assets/**'], ['server-coffee']);
   gulp.watch(paths.css, ['less']);
 });
 
