@@ -2,8 +2,61 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #cav {
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.main {
+  margin: 150px auto;
+  box-sizing: border-box;
+  max-width: 568px;
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+}
+
+#unw {
+  width: 70%;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #eee;
+}
+
+#username {
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding: 0;
+  outline: none;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+
+#unw:focus {
+  border: 1px solid #4285f4;
+}
+
+#dlw{
+  width: 20%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -4px;
+}
+
+#download {
+  width: 100%;
+  border: 1px solid transparent;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: 32px;
+  margin: 0;
+  outline: none;
+  padding: 0 0;
+  background: #4285f4;
+  color: #fff;
 }
