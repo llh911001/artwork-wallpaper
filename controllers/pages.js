@@ -2,12 +2,12 @@
 
 var views = require('co-views');
 
-var render = views(__dirname + "/../views", {
+var render = views(__dirname + '/../views', {
   map: {
-    html: "swig"
+    html: 'swig'
   }
 });
 
 module.exports.index = function *index(){
-  this.body = yield render("index", {})
+  this.body = yield render('index', {})
 }
