@@ -8,6 +8,7 @@ var route = require('koa-route');
 var app = koa();
 
 app.use(route.get('/', pages.index));
+app.use(route.get('/image', pages.image));
 
 app.use(function *(next){
   var start = new Date;

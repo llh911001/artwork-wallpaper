@@ -13,11 +13,12 @@
     "gulp-uglify": "^1.0.1",
     "koa-route": "^2.2.0",
     "koa-static": "^1.4.7",
-    "request": "^2.49.0",
     "swig": "^1.4.2"
   },
   "dependencies": {
+    "co-request": "^0.2.0",
     "koa": "^0.13.0",
+    "lwip": "0.0.5",
     "mocha": "^2.0.1"
   }
 }

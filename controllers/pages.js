@@ -1,23 +1,25 @@
 'use strict';
 
 var views = require('co-views');
-var request = require('request');
+var request = require('co-request');
 
 var render = views(__dirname + "/../views", {
   map: { html: "swig"}
 });
 
 exports.index = function *index(){
+  this.body = yield render("index");
+}
 
-  var url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=fakelbst&api_key=4dff88a0423651b3570253b10b745b2c&format=json';
+exports.image = function *image() {
+  var url    = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=fakelbst&api_key=4dff88a0423651b3570253b10b745b2c&format=json';
+  var resp   = yield request.get(url)
 
-  var img;
-  request(url, function (error, response, body) {
-      if (!error && response.statusCode == 200) {
-          console.log(response)
-      }
-  });
+  var result = JSON.parse(res.body)
+  var img    = result.topalbums.album.map(function(item){
+    return item.image[1]
+  })
 
-  this.body = yield render("index", {images: img});
+  this.body = yield render('index', {image: img})
 }
 

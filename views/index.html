@@ -3,12 +3,14 @@
 {% block title %}index{% endblock %}
 
 {% block content %}
-    <div class="main">
-        <div id="unw" tabindex="0">
-            <input id="username" type="text" name="user">
-        </div>
-        <div id="dlw">
-            <button id="download">GO!</button>
-        </div>
-    </div>
+  <div class="main">
+    <form method="post" action="">
+      <div id="unw" tabindex="0">
+        <input id="username" type="text" name="user">
+      </div>
+      <div id="dlw">
+        <button type="submit" id="download">GO!</button>
+      </div>
+    </form>
+  </div>
 {% endblock %}
