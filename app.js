@@ -9,6 +9,7 @@ var app = koa();
 
 app.use(route.get('/', pages.index));
 app.use(route.get('/image', pages.image));
+app.use(route.get('/test', pages.test));
 
 app.use(function *(next){
   var start = new Date;

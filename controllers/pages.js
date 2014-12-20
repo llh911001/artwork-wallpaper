@@ -1,5 +1,6 @@
 'use strict';
 
+var fs      = require('fs')
 var views   = require('co-views')
 var request = require('co-request')
 var lwip    = require('lwip')
@@ -40,3 +41,10 @@ exports.image = function *image() {
     this.body   = {error: 'no data'}
   }
 }
+
+exports.test = function *test() {
+  var url = 'http://userserve-ak.last.fm/serve/300x300/96864147.png'
+  this.type = 'image/png'
+  this.body = rreq.get(url)
+}
+
